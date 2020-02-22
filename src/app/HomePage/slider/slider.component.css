@@ -1,0 +1,42 @@
+
+.banner{
+	background: url('src\assets\img\bg-banner.jpg') no-repeat center top;
+    background-size: cover;
+	min-height: 580px;
+    position: relative;
+}
+.bg-color{
+	background-color: RGBA(12, 11, 11, 0.82);
+	min-height: 580px;
+}
+.text-dec{
+	font-size: 24px;
+	padding: 10px 20px;
+    margin: 15px 0;
+	text-transform: uppercase;
+    color: #fff;
+}
+.text-border{
+	border: 5px solid #5FCF80;
+	display: inline-block;
+	margin-top: 150px;
+}
+.intro-para{
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 30px;
+	color: #fff;
+	margin-top: 30px;
+}
+.big-text{
+    font-size: 35px;
+}
+.small-text{
+    font-size: 16px;
+}
+ a:hover, a:focus{
+	border: 2px solid #5FCF80;
+	background-color: #fff;
+	color: #5FCF80 !important;
+}
+
+

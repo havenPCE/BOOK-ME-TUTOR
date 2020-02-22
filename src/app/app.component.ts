@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project';
+  odd:number[]=[];
+  even:number[]=[];
+  onintervalfire(Intervaldata:number)
+  {
+//console.log(Intervaldata);
+if(Intervaldata%2==0)
+{
+  this.even.push(Intervaldata);
+}
+else
+{
+  this.odd.push(Intervaldata);
+}
+  }
+
 }
