@@ -10,6 +10,7 @@ import { Section1Component } from './homepage/section1/section1.component';
 import { FooterComponent } from './homepage/footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { Userpage1Component } from './userpage/userpage1/userpage1.component';
+import { UserpageComponent } from './userpage/userpage.component';
 
 
 
@@ -24,6 +25,7 @@ import { Userpage1Component } from './userpage/userpage1/userpage1.component';
     FooterComponent,
     HomepageComponent,
     Userpage1Component,
+    UserpageComponent,
   
     
     

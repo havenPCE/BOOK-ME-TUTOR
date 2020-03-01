@@ -1,0 +1,45 @@
+.banner{
+	background: url('src\assets\img\banner1.jpg') no-repeat center top;
+    background-size: cover;
+	min-height: 580px;
+    position: relative;
+}
+.bg-color{
+	background-color: RGBA(12, 11, 11, 0.82);
+	min-height: 580px;
+}
+
+.intro-para{
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 30px;
+	color: #fff;
+	margin-top:100px;
+}
+a:hover, a:focus{
+	border: 2px solid #5FCF80;
+	background-color: #fff;
+	color: #5FCF80 !important;
+}
+.big-text{
+	font-size: 20px;
+	font-family: 'Alegreya Sans', sans-serif;
+	color:white;
+	
+}
+.container{
+	padding-left: 220px;
+	padding-top: 30px;
+}
+.row{
+	padding-bottom: 20px;
+}
+button {
+size: 50px;
+shape-rendering: crispEdges;
+border-radius: 50px;
+width: 100px;
+}
+
+
+
+
