@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Userpage1Component } from './userpage/userpage1/userpage1.component';
+import { NgbModule, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project';
-  odd:number[]=[];
-  even:number[]=[];
-  onintervalfire(Intervaldata:number)
-  {
-//console.log(Intervaldata);
-if(Intervaldata%2==0)
-{
-  this.even.push(Intervaldata);
-}
-else
-{
-  this.odd.push(Intervaldata);
-}
-  }
+  constructor( ) { }
+  
+ 
 
 }

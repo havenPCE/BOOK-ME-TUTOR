@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit ,ViewChild} from '@angular/core';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,5 +11,13 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  @ViewChild('childModal', { static: false }) childModal: ModalDirective;
+ 
+  showChildModal(): void {
+    this.childModal.show();
+  }
+ 
+  hideChildModal(): void {
+    this.childModal.hide();
+  }
 }

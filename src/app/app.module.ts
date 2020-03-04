@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './homepage/header/header.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -11,6 +10,12 @@ import { FooterComponent } from './homepage/footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { Userpage1Component } from './userpage/userpage1/userpage1.component';
 import { UserpageComponent } from './userpage/userpage.component';
+
+
+import { ModalModule } from "ngx-bootstrap";
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 
@@ -26,13 +31,18 @@ import { UserpageComponent } from './userpage/userpage.component';
     HomepageComponent,
     Userpage1Component,
     UserpageComponent,
+    
   
     
     
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    ModalModule.forRoot(),
+    AngularFontAwesomeModule,
+    AppRoutingModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -66,3 +66,65 @@ a:hover, a:focus{
 li{
     scroll-behavior: smooth;
 }
+/*  LOGIN MODAL */
+
+.modal-login {
+    width: 500px;
+}
+.modal-login .modal-content {
+    border-radius: 1px;
+    border: none;
+}
+.modal-login .modal-header {
+    position: relative;
+    justify-content: center;
+    background: blueviolet
+}
+.modal-login .modal-body {
+    padding: 30px;
+}
+.modal-login .modal-footer {
+    background: #f2f2f2;
+}
+.modal-login h4 {
+    text-align: center;
+    font-size: 26px;
+}
+.modal-login label {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+
+.modal-login .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.modal-login .form-check {
+padding-left: 10px;
+}
+
+/*REGISTRATION MODAL*/
+.modal-signup {
+    width: 500px;
+}
+.modal-signup .modal-content {
+    border-radius: 1px;
+    border: none;
+}
+.modal-signup .modal-header{
+    background-color: blueviolet;
+    position: relative;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.modal-signup.close {
+    position: absolute;
+    top: 50px;
+    right: 50x;
+}
+.modal-signup .modal-footer {
+    background: #f2f2f2;
+}

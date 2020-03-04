@@ -33,13 +33,19 @@ a:hover, a:focus{
 .row{
 	padding-bottom: 20px;
 }
-button {
+.btn{
 size: 50px;
 shape-rendering: crispEdges;
 border-radius: 50px;
 width: 100px;
+
 }
 
+a:hover, a:focus{
+
+	background-color: #fff;
+	color: #5FCF80 !important;
+}
 
 
 
