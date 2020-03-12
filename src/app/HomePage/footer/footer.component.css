@@ -9,3 +9,13 @@ p{
     background: #111;
     color: #ccc;
 }
+.social  a{
+	margin: 0 5px;
+	font-size: 28px;
+	vertical-align: middle;
+	color:white;
+	
+}
+.social a:hover{
+	color:#19b9e7;
+}

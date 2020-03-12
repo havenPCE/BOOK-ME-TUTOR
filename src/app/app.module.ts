@@ -8,13 +8,30 @@ import { Jumboltron1Component } from './homepage/jumboltron1/jumboltron1.compone
 import { Section1Component } from './homepage/section1/section1.component';
 import { FooterComponent } from './homepage/footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { Userpage1Component } from './userpage/userpage1/userpage1.component';
-import { UserpageComponent } from './userpage/userpage.component';
 
+import { UserpageComponent } from './userpage/userpage.component';
+import {  FormsModule,ReactiveFormsModule} from "@angular/forms";
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatStepperModule,
+  MatInputModule,
+MatSelectModule,
+MatRadioModule,MatCheckboxModule
+} from '@angular/material';
 
 import { ModalModule } from "ngx-bootstrap";
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BookingCreated} from './UserPage/BookingService';
+import { UserpageHeaderComponent } from './UserPage/userpage-header/userpage-header.component';
+import { MyBookingsComponent } from './userpage/my-bookings/my-bookings.component';
+
+
 
 
 
@@ -29,8 +46,12 @@ import { AppRoutingModule } from './app-routing.module';
     Section1Component,
     FooterComponent,
     HomepageComponent,
-    Userpage1Component,
+
     UserpageComponent,
+    UserpageHeaderComponent,
+    MyBookingsComponent,
+   
+  
     
   
     
@@ -41,10 +62,17 @@ import { AppRoutingModule } from './app-routing.module';
     NgbModule,
     ModalModule.forRoot(),
     AngularFontAwesomeModule,
-    AppRoutingModule
-   
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatStepperModule,MatInputModule,
+    MatInputModule,ReactiveFormsModule,MatSelectModule,MatRadioModule,MatCheckboxModule
   ],
-  providers: [],
+  providers: [ BookingCreated],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

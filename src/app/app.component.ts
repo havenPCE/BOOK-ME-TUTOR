@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Userpage1Component } from './userpage/userpage1/userpage1.component';
+
 import { NgbModule, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
