@@ -1,5 +1,5 @@
-import { Component, OnInit ,ViewChild} from '@angular/core';
-import { ModalDirective } from 'ngx-bootstrap/modal';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,26 +8,14 @@ import { ModalDirective } from 'ngx-bootstrap/modal';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+ 
 
   ngOnInit() {
   }
-  @ViewChild('loginModal', { static: false }) loginModal: ModalDirective;
+
+
+
+
  
-  showLoginModal(): void {
-    this.loginModal.show();
-  }
- 
-  hideLoginModal(): void {
-    this.loginModal.hide();
-  }
-  @ViewChild('signupModal', { static: false }) signupModal: ModalDirective;
- 
-  showSignupModal(): void {
-    this.signupModal.show();
-  }
- 
-  hideSignupModal(): void {
-    this.signupModal.hide();
-  }
 }
 

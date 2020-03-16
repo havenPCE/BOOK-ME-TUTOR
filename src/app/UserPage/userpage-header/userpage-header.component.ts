@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticateService } from 'src/app/Auth/authenticate.service';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserpageHeaderComponent implements OnInit {
   
-  constructor() { }
+  constructor(private authenticateService:AuthenticateService,) { }
 
   ngOnInit() {
 

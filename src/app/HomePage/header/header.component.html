@@ -9,8 +9,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#feature">Features</a></li>
           <li><a href="#pricing">Pricing</a></li>
-        <li class="btn-trial"><a href="#Loginform" (click)="showLoginModal()">Login</a></li>
-        <li class="btn-trial"><a href="#Signupform" (click)="showSignupModal()">Sign in</a></li>
+        <li class="btn-trial"><a routerLink="/login">Login</a></li>
+        <li class="btn-trial"><a routerLink="/studentSignup">Sign in</a></li>
       
       </ul>
     </div>
@@ -19,158 +19,8 @@
 <!--/ Navigation bar-->
 
 
-<!---LoginModal-->
-<div  bsModal #loginModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-login" role="document">
-      
-    <div class="modal-content">
-                 <form action="" method="post">
-      <div class="modal-header text-center">
-        <h4 class="modal-title ">Login</h4>
-        <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close" (click)="hideLoginModal()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">	
-
-        <div class="form-group">
-          <label>Username</label>
-          <input type="text" class="form-control" required="required"  placeholder="Enter username" >
-        </div>
-
-        <div class="form-group">
-          <div class="clearfix">
-            <label>Password</label>
-            <a href="#" class="pull-right text-muted"><small>Forgot Password?</small></a>
-          </div>
-           <input type="password" class="form-control" required="required" placeholder=" Enter Password">
-        </div>
-     
-
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="tutor-check">
-        <label class="form-check-label" for="tutor-check" >I am a Tutor </label>
-      
-       
-      </div>  
-               <br>
-               <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="remember-check">
-                <label class="form-check-label" for="remember-check"  >Remember Me</label>
-             </div>
-            </div>         
-
-      <div class="modal-footer justify-content-center">
-        <button type="submit" class="btn btn-success">Login</button>
-      </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!---------/LoginModal-->
 
 
-<!------REGISTRATION modal-->
-<div  bsModal #signupModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered  modal-signup" role="document">
-    <div class="modal-content">
-        			
-      <form role="form" action="" method="post" class="registration-form">
 
-      <div class="modal-header text-center">
-        <h3 class="modal-title" id="modal-register-label"> Student Sign up </h3>
-         <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close" (click)="hideSignupModal()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      
-      <div class="modal-body">
-        
-                <div class="form-group">
-                  <label class="sr-only" for="form-first-name">First name</label>
-                    <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="first-name">
-                  </div>
 
-                  <div class="form-group">
-                    <label class="sr-only" for="Username">Last Name</label>
-                    <input type="text" id="last-name"
-                    class="form-control"
-                    placeholder="Last name"
-                    required ="required">
-                    
-                  </div>
-                  <div class="form-group">
-                      <label class="sr-only" for="Userclass">Class</label>
-                      <input type="text" 
-                      class="form-control"
-                      placeholder=" Enter Class 9/10/11/12"
-                      required ="required"
-                      id="class">
-                      
-                    </div>
-                    <div class="form-group">
-                      <label class="sr-only" for="Userboard">Board</label>
-                      <input type="text" id="board"
-                      class="form-control"
-                      placeholder="Enter Board-CBSE/ICSE"
-                      required ="required"
-                      maxlength="30">
-                    </div>
-                    <div class="form-group">
-                      <label  class="sr-only" for="Usergender">Gender</label>
-                      <input type="text" id="gender"
-                      class="form-control"
-                      placeholder="Gender-Male/Female/others"
-                      required ="required"
-                      maxlength="6">
-                    </div>
-                    <div class="form-group">
-                      <label  class="sr-only" for="Userid">UserId</label>
-                      <input type="text" id="userid"
-                      class="form-control"
-                      placeholder="UserId"
-                      required ="required"
-                      maxlength="20">
-                    </div>
-                  <div class="form-group">
-                    <label  class="sr-only" for="loginPassword1">Password &nbsp;</label>
-                    <input type="password" id="password"
-                    class="form-control"
-                     placeholder="Password"
-                     required ="required">
-                  </div>
-                  <div class="form-group">
-                      <label class="sr-only" for="Useraddress">Address</label>
-                      <textarea type="textarea" id="address"
-                      class="form-control"
-                      placeholder="Address"
-                      required ="required"
-                      rows="3"></textarea>
-                   </div>
-                    
-                    <div class="form-group">
-                      <label class="sr-only" for="Useremail">Email</label>
-                       <input type="email" class="form-control" id="email" placeholder="name@example.com"  required ="required">
-                 </div>
-
-                 <div class="form-group">
-                  <label class="sr-only" for="contact-no">Contact No</label>
-                   <input type="email" class="form-control" id="contact-no" placeholder="9005647850"  required ="required">
-             </div>
-      
-    </div>
-             <div class="modal-footer justify-content-center">
-               <button type="submit" class="btn btn-success">Sign-Up</button>
-               <button type="reset" class="btn btn-primary pull-right">Reset</button>
-                   </div>
-    </form>
-    </div>
-    </div>
-    </div>
-
-    <!-------/Registration Modal-->
     

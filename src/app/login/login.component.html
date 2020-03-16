@@ -1,0 +1,39 @@
+<app-header></app-header>
+<br><br><br><br>
+<div class="container-fluid">
+<div class="login-form">    
+    <form [formGroup]="loginForm">
+		<div class="header">
+        <h4 class="modal-title">Login to Your Account</h4>
+       </div>
+        <hr>
+        
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="email" required formControlName="email">
+            <p *ngIf="loginForm.get('email').invalid">Email must be a valid email address</p>
+        
+        </div>
+       
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password"  formControlName="password" required>
+        </div>
+
+        <div class="form-group">
+            <select class="form-control"  formControlName="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="student">Student</option>
+                <option value="tutor">Tutor</option>
+            </select>    
+        </div>
+
+        <div class="form-group small clearfix">
+            <label class="checkbox-inline"><input type="checkbox"  formControlName="isRememberMe" > Remember me</label><br>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+        </div> 
+
+        <button type="submit" class="btn btn-success btn-block btn-lg" (click)="loginSubmit()" >Login</button> <br>
+        <div class="text-center small">Don't have an account? <a routerLink="/studentSignup"> student Sign up</a></div>     
+        <div class="text-center small">Don't have an account? <a routerLink="/tutorSignup"> tutor Sign up</a></div>         
+    </form>			
+   
+</div>

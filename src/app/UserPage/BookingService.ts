@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-
+import {} from '@angular/common/http'
 import {Booking } from './Booking';
+import { from } from 'rxjs';
 
 @Injectable({
         providedIn:'root'
 })
 export class BookingCreated {
-private listBooking:Booking[]=[ ];
 
-createBooking(booking:Booking){
-this.listBooking.push(booking);
-};
+
+createBooking(booking:Booking){};
   
 
 constructor( ){}

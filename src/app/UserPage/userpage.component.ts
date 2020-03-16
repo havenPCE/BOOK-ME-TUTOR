@@ -129,10 +129,6 @@ ngOnInit() {
       return;	
        } 
   console.log('submitted');
-  console.log(this.Step1.value);
-  console.log(this.Step2.value);
-  console.log(this.Step3.value);
-  console.log(this.Step4.value);
   this.formSubmitted = true;
   this.booking.Board=this.Step1.get('boardcontrol').value;
   this.booking.Class=this.Step1.get('classcontrol').value;

@@ -45,4 +45,6 @@ a:hover, a:focus{
 label.checkbox{
 	padding-left: 0px;
 }
-
+p{
+    color:red
+}

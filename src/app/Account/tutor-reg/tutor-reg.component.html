@@ -1,0 +1,80 @@
+<app-header></app-header>
+<br><br><br><br>
+
+<div class="container-fluid">
+<div class="signup-form">
+    <form  [formGroup]="tutorForm">
+		<h2> Tutor Sign Up</h2>
+        <h6>Please fill in this form to create an account!</h6>
+        <p>*  All are Required fields</p>
+		<hr>
+        
+               <div class="form-group">
+                <label class="sr-only">First Name</label>
+                <input type="text"  placeholder="First name" formControlName="first_name" class="form-control" required >
+                 </div>
+          
+      
+                  <div class="form-group">
+                     <label class="sr-only" >Last Name</label>
+                          <input type="text" 
+                         placeholder="Last name" formControlName="last_name" required class="form-control" >
+                         </div>
+                                  
+                        
+                          <div class="form-group">
+                            <label  class="sr-only" >Gender</label>
+                           <input type="radio" value="male" formControlName="gender" required  > Male
+                            <input type="radio" value="female" formControlName="gender" required>  Female
+                             </div>
+                          
+                         <div class="form-group">
+                          <label  class="sr-only" >Password &nbsp;</label>
+                          <input type="password" placeholder="Password" required  formControlName="password" class="form-control" >
+                          
+                         </div>   
+                           
+                         <div class="form-group">
+                            <label  class="sr-only" >Highest Qualification </label>
+                            <input type="text" placeholder="Highest Qualification" required  formControlName="qualification" class="form-control" >
+                            
+                           </div>   
+                         
+
+                        <div class="form-group">
+                            <label >Address</label>
+                            <input type="text" placeholder="Line1" required  formControlName="line1" class="form-control" >
+                            <input type="text" placeholder="Line2" required  formControlName="line2" class="form-control" >
+                            <input type="text" placeholder="City" required  formControlName="city" class="form-control" >
+                            <input type="text" placeholder="Pincode" required  formControlName="pincode" class="form-control" >
+                            
+                           </div>
+      
+
+                           
+                         
+                         
+                       <div class="form-group">
+                            <label class="sr-only" for="Useremail">Email</label>
+                             <input type="email"  placeholder="email"  formControlName="email" required class="form-control">
+                             <p *ngIf="tutorForm.get('email').invalid">Email must be a valid email address</p>
+                       </div>
+      
+                        
+                       <div class="form-group">
+                        <label class="sr-only" for="contact-no">Contact No</label>
+                         <input type="number"  required class="form-control" placeholder="Contact No" formControlName="phone">
+                   
+                   </div>
+                          
+                          
+        
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg" (click)="tutorSubmit()">Sign Up</button>
+            <button type="submit" class="btn btn-info btn-lg" (click)="reset()">Reset</button>
+        </div>
+	<div class="text-center">Already have an account? <a routerLink="/login">Login here</a></div>
+
+    </form>
+</div>
+</div>

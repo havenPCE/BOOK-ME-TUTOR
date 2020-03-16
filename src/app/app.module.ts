@@ -11,6 +11,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 
 import { UserpageComponent } from './userpage/userpage.component';
 import {  FormsModule,ReactiveFormsModule} from "@angular/forms";
+
 import {
   MatToolbarModule,
   MatButtonModule,
@@ -30,6 +31,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BookingCreated} from './UserPage/BookingService';
 import { UserpageHeaderComponent } from './UserPage/userpage-header/userpage-header.component';
 import { MyBookingsComponent } from './userpage/my-bookings/my-bookings.component';
+import {  HttpClientModule } from '@angular/common/http';
+
+import { LoginComponent } from './login/login.component';
+import { StudentRegComponent } from './Account/student-reg/student-reg.component';
+import { TutorRegComponent } from './Account/tutor-reg/tutor-reg.component';
+import { AuthenticateService } from './Auth/authenticate.service';
+import { AuthGuard } from './Auth/auth.guard';
+import { TutorGuard } from './Auth/tutor.guard';
+
+
+
 
 
 
@@ -50,6 +62,11 @@ import { MyBookingsComponent } from './userpage/my-bookings/my-bookings.componen
     UserpageComponent,
     UserpageHeaderComponent,
     MyBookingsComponent,
+    LoginComponent,
+   StudentRegComponent,
+    TutorRegComponent,
+   
+
    
   
     
@@ -63,7 +80,8 @@ import { MyBookingsComponent } from './userpage/my-bookings/my-bookings.componen
     ModalModule.forRoot(),
     AngularFontAwesomeModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,HttpClientModule,
+
     BrowserAnimationsModule,
     MatButtonModule,
     MatSidenavModule,
@@ -72,7 +90,7 @@ import { MyBookingsComponent } from './userpage/my-bookings/my-bookings.componen
     MatStepperModule,MatInputModule,
     MatInputModule,ReactiveFormsModule,MatSelectModule,MatRadioModule,MatCheckboxModule
   ],
-  providers: [ BookingCreated],
+  providers: [ BookingCreated,AuthenticateService ,AuthGuard,TutorGuard],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
