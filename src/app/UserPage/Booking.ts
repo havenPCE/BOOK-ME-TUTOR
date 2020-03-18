@@ -1,12 +1,18 @@
+import { Time } from '@angular/common';
 
 export class Booking { 
-     Board: string;
-     Class: number;
-     Subject:String;
-     Topics:any=[];
-     Date:String;
-     Time:String;
-     Address:String;
+     board: string;
+     classNumber: string;
+     subject:string;
+     topic:string;
+     schedule:string;
+     line1:String;
+     line2:String;
+     city:String;
+     pincode:String;
+     method:string;
+     
+     amount:number;
     constructor() {
     }
    

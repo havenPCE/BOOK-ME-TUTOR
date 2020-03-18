@@ -8,9 +8,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="btn-trial"><a href="#Loginform" (click)="showLoginModal()">My Bookings</a></li>
-        <li class="btn-trial"><a href="#Loginform" (click)="showLoginModal()">Profile</a></li>
-        <li class="btn-trial"><a (click)="authenticateService.studentLoggedOut()">Logout</a></li>
+        <li class="btn-trial"><a routerLink="./mybookings">My Bookings</a></li>
+        <li class="btn-trial"><a routerLink="./profile">Profile</a></li>
+        <li class="btn-trial"><a (click)="authenticateService.LoggedOut()">Logout</a></li>
       
       </ul>
     </div>

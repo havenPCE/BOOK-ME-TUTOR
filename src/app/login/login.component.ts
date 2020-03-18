@@ -40,7 +40,12 @@ export class LoginComponent implements OnInit {
          console.log(response)
          localStorage.setItem('token','Bearer '+response.jwtToken)
          localStorage.setItem('role',this.login.role)
-          this.router.navigate(['/userpage'])
+         localStorage.setItem('mail',this.login.email)
+         if(this.login.role==='student')
+         this.router.navigate(['/userpage/booking'])
+         else if(this.login.role==='tutor')
+         this.router.navigate(['/tutorpage'])
+       
       },
    
       error=>{alert("Email/Password is incorrect or not verified")

@@ -13,7 +13,7 @@ import { UserpageComponent } from './userpage/userpage.component';
 import {  FormsModule,ReactiveFormsModule} from "@angular/forms";
 
 import {
-  MatToolbarModule,
+  MatCardModule,
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
@@ -28,7 +28,7 @@ import { ModalModule } from "ngx-bootstrap";
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BookingCreated} from './UserPage/BookingService';
+import { BookingService} from './UserPage/BookingService';
 import { UserpageHeaderComponent } from './UserPage/userpage-header/userpage-header.component';
 import { MyBookingsComponent } from './userpage/my-bookings/my-bookings.component';
 import {  HttpClientModule } from '@angular/common/http';
@@ -39,6 +39,15 @@ import { TutorRegComponent } from './Account/tutor-reg/tutor-reg.component';
 import { AuthenticateService } from './Auth/authenticate.service';
 import { AuthGuard } from './Auth/auth.guard';
 import { TutorGuard } from './Auth/tutor.guard';
+import { TutorPageComponent } from './tutor-page/tutor-page.component';
+import { TutorPageHeaderComponent } from './tutor-page/tutor-page-header/tutor-page-header.component';
+import { StudentProfileComponent } from './userpage/student-profile/student-profile.component';
+import { TutorProfileComponent } from './tutor-page/tutor-profile/tutor-profile.component';
+import { BookingPageComponent } from './userpage/booking-page/booking-page.component';
+import { ResetBookingComponent } from './userpage/reset-booking/reset-booking.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
+
 
 
 
@@ -65,6 +74,29 @@ import { TutorGuard } from './Auth/tutor.guard';
     LoginComponent,
    StudentRegComponent,
     TutorRegComponent,
+    TutorPageComponent,
+    
+   
+    TutorPageHeaderComponent,
+    
+   
+    StudentProfileComponent,
+    
+   
+    TutorProfileComponent,
+    
+   
+    BookingPageComponent,
+    
+   
+    ResetBookingComponent,
+    
+   
+    PagenotfoundComponent,
+    
+   
+   
+
    
 
    
@@ -88,9 +120,9 @@ import { TutorGuard } from './Auth/tutor.guard';
     MatIconModule,
     MatListModule,
     MatStepperModule,MatInputModule,
-    MatInputModule,ReactiveFormsModule,MatSelectModule,MatRadioModule,MatCheckboxModule
+    MatInputModule,ReactiveFormsModule,MatSelectModule,MatRadioModule,MatCheckboxModule,MatCardModule
   ],
-  providers: [ BookingCreated,AuthenticateService ,AuthGuard,TutorGuard],
+  providers: [ BookingService,AuthenticateService ,AuthGuard,TutorGuard],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

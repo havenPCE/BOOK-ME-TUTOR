@@ -13,6 +13,7 @@ import { TutorRegister } from '../Request/tutorRegister';
 })
 export class AuthenticateService {
   serverUrl='http://bookmetutor-backend.ap-southeast-1.elasticbeanstalk.com';
+  role:string;
 
   httpOptions={
     headers:new HttpHeaders({
@@ -54,11 +55,15 @@ export class AuthenticateService {
   }
 
   LoggedIn(){
+    this.role=localStorage.getItem('role');
     return !!(localStorage.getItem('token')&& localStorage.getItem('role'));
+ 
   }
+  
   LoggedOut(){
      localStorage.removeItem('token')
      localStorage.removeItem('role')
+     localStorage.removeItem('mail')
      this.router.navigate([''])
   }
 
