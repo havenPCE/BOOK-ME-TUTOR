@@ -12,14 +12,28 @@ import { Cancel } from './classes/cancel';
 export class BookingService{
   subjectname:string
   class:string
+
+  
+
  serverUrl='http://bookmetutor-backend.ap-southeast-1.elasticbeanstalk.com';
 
 httpOptions={
+
 headers:new HttpHeaders({
  'Content-Type':'application/json',
  'Authorization':localStorage.getItem('token')
    } )
  };
+
+ deleteOptions={
+  headers:new HttpHeaders({
+    'Content-Type':'application/json',
+    'Authorization':localStorage.getItem('token')
+    } ),
+    body:{
+      'reason' : ''
+    }
+ }
       
  constructor(private http:HttpClient,
           private router:Router) { }
@@ -50,7 +64,9 @@ getBooking():Observable<any>
 }
 
 cancelBooking(id:number):Observable<void>{
-  return this.http.delete<void>(this.serverUrl+'/user/'+localStorage.getItem('mail')+'/booking/'+id,this.httpOptions).
+ 
+
+  return this.http.delete<void>(this.serverUrl+'/user/'+localStorage.getItem('mail')+'/booking/'+id,this.deleteOptions).
   pipe(
      
     catchError(this.handleError)

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 import { BookingResponse } from 'src/app/Response/bookingResponse';
 import { Router } from '@angular/router';
 import { BookingService} from '../BookingService';
@@ -15,7 +15,8 @@ id:number
  
 
   constructor(private bookingservice: BookingService,
-              private router:Router) { }
+              private router:Router,
+              private changedetect:ChangeDetectorRef) { }
 
   ngOnInit() {
     
@@ -31,11 +32,24 @@ id:number
     )
     
   }
-  deleteBooking(){
-    this.bookingservice.cancelBooking(this.responsebooking.id).subscribe(
-      ()=>console.log("cancelled")
+  deleteBooking(id:number){
+    this.bookingservice.cancelBooking(id).subscribe(
+      (data)=>{
+        console.log("cancelled :"+id),
+        this.bookingservice.getBooking().subscribe(
+          data=>
+            {this.responsebooking=data
+            this.changedetect.detectChanges()}
+          
+        )
+      }
     )
-  }
+        
+    
+      }
+
+    
+  
 
   update(){
     this.router.navigate(['/reschedule',this.responsebooking.id])
