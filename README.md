@@ -1,7 +1,7 @@
 # Project
 
 • Built a tutor booking platform using Angular 7 for the frontend and Spring and
-PostgreSQL forthe backend. <br>
+PostgreSQL for the backend. <br>
 • Streamlined the tutoring process by enabling students to book tutors and
 allowing tutors to accept or reject bookings based on matching criteria.
 <br><br>
